@@ -1,23 +1,23 @@
 {
   "id": "./",
-  "name": "Your Personal Digital Vaul",
-  "short_name": "Your Personal Digital Vaul",
-  "description": "Your Personal Digital Vaul",
+  "name": "Platiee - Your Personal Digital Vault",
+  "short_name": "Platiee",
+  "description": "Your personal digital vault for securely managing your content.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#000",
-  "theme_color": "#000",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "./logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "logo.png",
+      "src": "./logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
