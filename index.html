@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Platiee — Your Personal Digital Vault</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 32 32"><rect x="2" y="2" width="28" height="28" rx="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="16" r="2" fill="currentColor"/><path d="M16 9v3M16 20v3M9 16h3M20 16h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol></svg>
+
+<div id="setup" class="center hidden"><div class="glass panel">
+  <svg class="logo"><use href="#logo"/></svg><h1>Platiee</h1>
+  <p><b>Setup required.</b> Open <code>script.js</code>, paste your Supabase Project URL and anon/publishable key into <code>SUPABASE_URL</code> and <code>SUPABASE_ANON_KEY</code>, and run the setup SQL. Until then nothing can be saved.</p>
+</div></div>
+
+<div id="auth" class="center hidden"><form id="af" class="glass panel">
+  <svg class="logo"><use href="#logo"/></svg><h1>Platiee</h1><p class="muted">Your Personal Digital Vault</p>
+  <label>Email<input id="em" type="email" autocomplete="email" required></label>
+  <label>Password<input id="pw" type="password" autocomplete="current-password" minlength="8" required></label>
+  <div class="row"><button class="btn primary" value="signin">Sign in</button><button class="btn" value="signup">Sign up</button></div>
+  <p id="am" class="muted" role="status"></p>
+</form></div>
+
+<div id="app" class="hidden">
+  <header class="top">
+    <div class="brand"><svg class="logo"><use href="#logo"/></svg><div><b>Platiee</b><small>Your Personal Digital Vault</small></div></div>
+    <input id="q" type="search" placeholder="Search everything…" aria-label="Search">
+    <button class="btn primary" data-act="new"><i data-lucide="plus"></i> New</button>
+  </header>
+  <nav id="nav" aria-label="Main">
+    <button data-view="home"><i data-lucide="house"></i><span>Home</span></button>
+    <button data-view="all"><i data-lucide="layers"></i><span>All Items</span></button>
+    <button data-view="link"><i data-lucide="link"></i><span>Links</span></button>
+    <button data-view="code"><i data-lucide="code-2"></i><span>Code</span></button>
+    <button data-view="question"><i data-lucide="help-circle"></i><span>Questions</span></button>
+    <button data-view="note"><i data-lucide="file-text"></i><span>Notes</span></button>
+    <button data-view="folders"><i data-lucide="folder"></i><span>Folders</span></button>
+    <button data-view="favs"><i data-lucide="star"></i><span>Favourites</span></button>
+    <button data-view="bin"><i data-lucide="trash-2"></i><span>Recycle Bin</span></button>
+    <button data-view="settings"><i data-lucide="settings"></i><span>Settings</span></button>
+  </nav>
+  <main id="view" tabindex="-1"></main>
+</div>
+
+<div id="modal" class="overlay hidden"></div>
+<div id="confirm" class="overlay hidden"></div>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
